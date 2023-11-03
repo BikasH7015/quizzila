@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzila</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class=" p-8">
+
+    <header class="flex items-center justify-center mb-8">
+        <img src="logo-black.png" alt="Logo" class="mr-2 h-40"> 
+    </header>
+
+    <div class="w-[100%] mx-auto bg-white p-12 rounded-md shadow-lg ">
+        <!-- Timer Display -->
+        <div id="timer" class="font-bold mb-4 text-center"></div>
+
+        <!-- Subject Selection Dropdown -->
+        <div class="mb-4 ">
+            <label for="subject" class="block font-bold mb-2"> 🔓Unlocking Knowledge🧠, One Question at a Time!</label>
+            <select id="subject" class="w-full bg-gray-300 p-2 border border-gray-300 rounded-md">
+                <option value="">Please Select the Subject</option>
+                <option value="aptitude">Aptitude</option>
+                <option value="reasoning">Reasoning</option>
+                <option value="coding">Coding</option>
+            </select>
+        </div>
+
+        <div id="quiz" class="mb-8 text-xl">
+            <!-- Questions will be loaded dynamically here -->
+        </div>
+
+        <button id="nextBtn" class="px-8 bg-black hover:bg-gray-800 text-white font-bold mt-12 py-2 px-4 rounded-full">Next</button>
+        <button id="submitBtn" class="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded-full hidden">Submit</button>
+
+        <div id="result" class="mt-4 font-bold"></div>
+
+        <!-- Restart Test Button -->
+        <button id="restartBtn" class="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded-full hidden mt-4">Retake Test</button>
+        <button id="showDetailsBtn" class="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 mt-8 rounded-full hidden">Show Details</button>
+
+<div id="detailsContainer" class="hidden mt-4">
+    <h2 class="font-bold mb-2">Details</h2>
+    <div id="correctQuestions"></div>
+    <div id="incorrectQuestions"></div>
+</div>
+    </div>
+
+    <script src="script.js"></script> 
+</html>
